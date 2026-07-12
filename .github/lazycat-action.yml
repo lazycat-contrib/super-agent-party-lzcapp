@@ -25,15 +25,6 @@ images:
     tag_regex: '^v?[0-9]+\.[0-9]+\.[0-9]+$'
     delivery:
       mode: lazycat
-  - id: gateway
-    target: service
-    service: gateway
-    source: ailm32442/nigix-for-sap
-    channel: stable
-    tag_regex: '^v?[0-9]+\.[0-9]+\.[0-9]+$'
-    delivery:
-      mode: lazycat
-
 stores:
   official:
     enabled: true
