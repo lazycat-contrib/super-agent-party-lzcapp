@@ -1,17 +1,16 @@
 application:
   subdomain: super-agent-party
   background_task: true
-
   upstreams:
     - location: /
       backend: http://gateway:3456/
 services:
   backend:
     # ailm32442/super-agent-party:0.3.4
-    image: registry.lazycat.cloud/czyt/ailm32442/super-agent-party:a382364b22ebdb6b
+    # upstream: ailm32442/super-agent-party:0.4.2
+    image: registry.lazycat.cloud/czyt/ailm32442/super-agent-party:014c8a6d20f481c1
     binds:
       - /lzcapp/var/data:/app/data
-
   gateway:
     # ailm32442/nigix-for-sap:0.1.1
     image: registry.lazycat.cloud/czyt/ailm32442/nigix-for-sap:cec0a6a3cbb6eb5e
