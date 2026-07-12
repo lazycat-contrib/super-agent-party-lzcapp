@@ -1,10 +1,3 @@
-name: Super Agent Party
-package: cloud.lazycat.app.super-agent-party
-version: 0.3.4
-min_os_version: 1.3.8
-description: 🚀 一款拥有无限可能的3D版AI桌面伴侣！
-homepage: https://github.com/heshengtao/super-agent-party
-author: heshengtao
 application:
   subdomain: super-agent-party
   background_task: true
@@ -22,8 +15,6 @@ services:
   gateway:
     # ailm32442/nigix-for-sap:0.1.1
     image: registry.lazycat.cloud/czyt/ailm32442/nigix-for-sap:cec0a6a3cbb6eb5e
-    container_name: sap-gateway
-    restart: unless-stopped
     environment:
       - JWT_SECRET={{ stable_secret "jwt$sa" }}
       - INIT_USER={{.U.admin_username}}
@@ -34,11 +25,3 @@ services:
       - /lzcapp/var/gateway:/data # 持久化保存密码修改后的状态
     depends_on:
       - backend
-
-locales:
-  zh:
-    name: "Super Agent Party"
-    description: "🚀 一款拥有无限可能的3D版AI桌面伴侣！"
-  en:
-    name: "Super Agent Party"
-    description: "🚀 An AI desktop companion with endless possibilities!"
