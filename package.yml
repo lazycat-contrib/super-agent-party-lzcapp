@@ -1,5 +1,5 @@
 package: cloud.lazycat.app.super-agent-party
-version: 0.4.2
+version: 0.4.3
 name: Super Agent Party
 description: "\U0001F680 一款拥有无限可能的3D版AI桌面伴侣！"
 min_os_version: 1.5.0

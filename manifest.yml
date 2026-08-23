@@ -7,8 +7,8 @@ application:
 services:
   backend:
     # ailm32442/super-agent-party:0.3.4
-    # upstream: ailm32442/super-agent-party:0.4.2
-    image: registry.lazycat.cloud/czyt/ailm32442/super-agent-party:014c8a6d20f481c1
+    # upstream: ailm32442/super-agent-party:0.4.3
+    image: registry.lazycat.cloud/czyt/ailm32442/super-agent-party:bdc7022e5a51c00f
     binds:
       - /lzcapp/var/data:/app/data
   gateway:
